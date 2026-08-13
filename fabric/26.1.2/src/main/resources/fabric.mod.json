@@ -5,8 +5,12 @@
 	"name": "HtmlCraft API",
 	"description": "HTML/CSS 渲染引擎，为 Minecraft GUI 提供基于 Web 技术的界面构建能力",
 	"authors": [
-		"HtmlCraft Team"
+		"Yifei"
 	],
+	"contact": {
+		"homepage": "https://github.com/19136644525lxy",
+		"sources": "https://github.com/19136644525lxy/HtmlCraft-API"
+	},
 	"license": "LGPL-2.1",
 	"icon": "assets/htmlcraftapi/icon.png",
 	"environment": "client",
