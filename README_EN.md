@@ -1,6 +1,6 @@
 # HtmlCraft API
 
-> HTML/CSS GUI Rendering Engine for Minecraft 1.20.1 Forge / Fabric
+> HTML/CSS GUI Rendering Engine for Minecraft 1.20.1 Forge / Fabric and 26.2 Fabric
 
 ## Introduction
 
@@ -24,9 +24,9 @@
 
 ## Requirements
 
-This API ships in two versions, Forge and Fabric. Pick the jar matching your loader.
+This API ships in three versions. Pick the jar matching your loader and Minecraft version.
 
-### Forge Version
+### Forge Version (1.20.1)
 
 | Dependency | Version |
 |------------|---------|
@@ -34,7 +34,7 @@ This API ships in two versions, Forge and Fabric. Pick the jar matching your loa
 | Forge | 47.x |
 | Java | 17 |
 
-### Fabric Version
+### Fabric Version (1.20.1)
 
 | Dependency | Version |
 |------------|---------|
@@ -43,14 +43,24 @@ This API ships in two versions, Forge and Fabric. Pick the jar matching your loa
 | Fabric API | 0.92.11+1.20.1 |
 | Java | 17 |
 
+### Fabric Version (26.2)
+
+| Dependency | Version |
+|------------|---------|
+| Minecraft | 26.2 |
+| Fabric Loader | >=0.19.3 |
+| Fabric API | 0.156.0+26.2 |
+| Java | 25 |
+
 ---
 
 ## Installation
 
 ### As a Mod Dependency
 
-- Forge: place `htmlcraftapi-1.0.0-1.20.1forge.jar` into the `mods` folder
-- Fabric: place `htmlcraftapi-1.0.0-1.20.1fabric.jar` into the `mods` folder
+- Forge 1.20.1: place `htmlcraftapi-1.0.0-1.20.1forge.jar` into the `mods` folder
+- Fabric 1.20.1: place `htmlcraftapi-1.0.0-1.20.1fabric.jar` into the `mods` folder
+- Fabric 26.2: place `htmlcraftapi-1.0.0-26.2fabric.jar` into the `mods` folder
 
 ### As a Development Dependency
 
@@ -73,15 +83,18 @@ dependencies {
 For Fabric, `includeBuild` is recommended to bring in the source project for debugging:
 
 ```gradle
-// settings.gradle
+// settings.gradle (1.20.1)
 includeBuild '../HtmlCraftAPI/fabric'
+
+// settings.gradle (26.2)
+includeBuild '../HtmlCraftAPI/fabric/26.2'
 ```
 
 ---
 
 ## Quick Start
 
-> Examples below use Forge (Mojang mappings) API. The Fabric version only differs in class names (e.g. `Component` → `Text`, `Minecraft` → `MinecraftClient`, `GuiGraphics` → `DrawContext`); the HTML/CSS API is identical.
+> Examples below use Forge (Mojang mappings) API. The Fabric 1.20.1 version only differs in class names (e.g. `Component` → `Text`, `Minecraft` → `MinecraftClient`, `GuiGraphics` → `DrawContext`). The Fabric 26.2 version refactors the internal render layer (`GuiGraphics` → `GuiGraphicsExtractor`), but the public HTML/CSS API is identical.
 
 ### 1. Create a Screen via Builder
 

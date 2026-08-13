@@ -1,6 +1,6 @@
 # HtmlCraft API
 
-> Minecraft 1.20.1 Forge / Fabric HTML/CSS GUI 渲染引擎
+> Minecraft 1.20.1 Forge / Fabric 及 26.2 Fabric HTML/CSS GUI 渲染引擎
 
 ## 简介
 
@@ -24,9 +24,9 @@
 
 ## 环境要求
 
-本 API 同时提供 Forge 和 Fabric 两个版本，按所用加载器选择对应 jar 即可。
+本 API 提供三个版本，按所用加载器和 Minecraft 版本选择对应 jar 即可。
 
-### Forge 版
+### Forge 版（1.20.1）
 
 | 依赖 | 版本 |
 |------|------|
@@ -34,7 +34,7 @@
 | Forge | 47.x |
 | Java | 17 |
 
-### Fabric 版
+### Fabric 版（1.20.1）
 
 | 依赖 | 版本 |
 |------|------|
@@ -43,14 +43,24 @@
 | Fabric API | 0.92.11+1.20.1 |
 | Java | 17 |
 
+### Fabric 版（26.2）
+
+| 依赖 | 版本 |
+|------|------|
+| Minecraft | 26.2 |
+| Fabric Loader | >=0.19.3 |
+| Fabric API | 0.156.0+26.2 |
+| Java | 25 |
+
 ---
 
 ## 安装
 
 ### 作为模组前置依赖
 
-- Forge：将 `htmlcraftapi-1.0.0-1.20.1forge.jar` 放入 `mods` 文件夹
-- Fabric：将 `htmlcraftapi-1.0.0-1.20.1fabric.jar` 放入 `mods` 文件夹
+- Forge 1.20.1：将 `htmlcraftapi-1.0.0-1.20.1forge.jar` 放入 `mods` 文件夹
+- Fabric 1.20.1：将 `htmlcraftapi-1.0.0-1.20.1fabric.jar` 放入 `mods` 文件夹
+- Fabric 26.2：将 `htmlcraftapi-1.0.0-26.2fabric.jar` 放入 `mods` 文件夹
 
 ### 作为开发依赖
 
@@ -73,15 +83,18 @@ dependencies {
 Fabric 版推荐通过 `includeBuild` 引入源码工程以便调试：
 
 ```gradle
-// settings.gradle
+// settings.gradle（1.20.1）
 includeBuild '../HtmlCraftAPI/fabric'
+
+// settings.gradle（26.2）
+includeBuild '../HtmlCraftAPI/fabric/26.2'
 ```
 
 ---
 
 ## 快速上手
 
-> 以下示例使用 Forge (Mojang 映射) API。Fabric 版仅类名存在差异（如 `Component` → `Text`、`Minecraft` → `MinecraftClient`、`GuiGraphics` → `DrawContext`），HTML/CSS API 完全一致。
+> 以下示例使用 Forge (Mojang 映射) API。Fabric 1.20.1 版仅类名存在差异（如 `Component` → `Text`、`Minecraft` → `MinecraftClient`、`GuiGraphics` → `DrawContext`）。Fabric 26.2 版内部渲染层重构（`GuiGraphics` → `GuiGraphicsExtractor`），但对外 HTML/CSS API 完全一致。
 
 ### 1. 通过 Builder 创建界面
 
