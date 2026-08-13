@@ -1,6 +1,6 @@
 # HtmlCraft API
 
-> Minecraft 1.20.1 Forge / Fabric 及 26.2 Fabric HTML/CSS GUI 渲染引擎
+> Minecraft 1.20.1 Forge / Fabric、26.1.2 Fabric 及 26.2 Fabric HTML/CSS GUI 渲染引擎
 
 ## 简介
 
@@ -24,7 +24,7 @@
 
 ## 环境要求
 
-本 API 提供三个版本，按所用加载器和 Minecraft 版本选择对应 jar 即可。
+本 API 提供四个版本，按所用加载器和 Minecraft 版本选择对应 jar 即可。
 
 ### Forge 版（1.20.1）
 
@@ -43,6 +43,15 @@
 | Fabric API | 0.92.11+1.20.1 |
 | Java | 17 |
 
+### Fabric 版（26.1.2）
+
+| 依赖 | 版本 |
+|------|------|
+| Minecraft | 26.1.2 |
+| Fabric Loader | >=0.19.3 |
+| Fabric API | 0.155.2+26.1.2 |
+| Java | 25 |
+
 ### Fabric 版（26.2）
 
 | 依赖 | 版本 |
@@ -60,6 +69,7 @@
 
 - Forge 1.20.1：将 `htmlcraftapi-1.0.0-1.20.1forge.jar` 放入 `mods` 文件夹
 - Fabric 1.20.1：将 `htmlcraftapi-1.0.0-1.20.1fabric.jar` 放入 `mods` 文件夹
+- Fabric 26.1.2：将 `htmlcraftapi-1.0.0-26.1.2fabric.jar` 放入 `mods` 文件夹
 - Fabric 26.2：将 `htmlcraftapi-1.0.0-26.2fabric.jar` 放入 `mods` 文件夹
 
 ### 作为开发依赖
@@ -85,6 +95,9 @@ Fabric 版推荐通过 `includeBuild` 引入源码工程以便调试：
 ```gradle
 // settings.gradle（1.20.1）
 includeBuild '../HtmlCraftAPI/fabric'
+
+// settings.gradle（26.1.2）
+includeBuild '../HtmlCraftAPI/fabric/26.1.2'
 
 // settings.gradle（26.2）
 includeBuild '../HtmlCraftAPI/fabric/26.2'

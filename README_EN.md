@@ -1,6 +1,6 @@
 # HtmlCraft API
 
-> HTML/CSS GUI Rendering Engine for Minecraft 1.20.1 Forge / Fabric and 26.2 Fabric
+> HTML/CSS GUI Rendering Engine for Minecraft 1.20.1 Forge / Fabric, 26.1.2 Fabric and 26.2 Fabric
 
 ## Introduction
 
@@ -24,7 +24,7 @@
 
 ## Requirements
 
-This API ships in three versions. Pick the jar matching your loader and Minecraft version.
+This API ships in four versions. Pick the jar matching your loader and Minecraft version.
 
 ### Forge Version (1.20.1)
 
@@ -43,6 +43,15 @@ This API ships in three versions. Pick the jar matching your loader and Minecraf
 | Fabric API | 0.92.11+1.20.1 |
 | Java | 17 |
 
+### Fabric Version (26.1.2)
+
+| Dependency | Version |
+|------------|---------|
+| Minecraft | 26.1.2 |
+| Fabric Loader | >=0.19.3 |
+| Fabric API | 0.155.2+26.1.2 |
+| Java | 25 |
+
 ### Fabric Version (26.2)
 
 | Dependency | Version |
@@ -60,6 +69,7 @@ This API ships in three versions. Pick the jar matching your loader and Minecraf
 
 - Forge 1.20.1: place `htmlcraftapi-1.0.0-1.20.1forge.jar` into the `mods` folder
 - Fabric 1.20.1: place `htmlcraftapi-1.0.0-1.20.1fabric.jar` into the `mods` folder
+- Fabric 26.1.2: place `htmlcraftapi-1.0.0-26.1.2fabric.jar` into the `mods` folder
 - Fabric 26.2: place `htmlcraftapi-1.0.0-26.2fabric.jar` into the `mods` folder
 
 ### As a Development Dependency
@@ -85,6 +95,9 @@ For Fabric, `includeBuild` is recommended to bring in the source project for deb
 ```gradle
 // settings.gradle (1.20.1)
 includeBuild '../HtmlCraftAPI/fabric'
+
+// settings.gradle (26.1.2)
+includeBuild '../HtmlCraftAPI/fabric/26.1.2'
 
 // settings.gradle (26.2)
 includeBuild '../HtmlCraftAPI/fabric/26.2'
