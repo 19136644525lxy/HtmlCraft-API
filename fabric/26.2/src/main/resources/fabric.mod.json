@@ -1,0 +1,27 @@
+{
+	"schemaVersion": 1,
+	"id": "htmlcraftapi",
+	"version": "${version}",
+	"name": "HtmlCraft API",
+	"description": "基于 HTML/CSS 的 Minecraft GUI 渲染框架 - Fabric 26.2 版",
+	"authors": [
+		"HtmlCraft Team"
+	],
+	"license": "CC0-1.0",
+	"icon": "assets/htmlcraftapi/icon.png",
+	"environment": "client",
+	"entrypoints": {
+		"client": [
+			"com.htmlcraft.api.HtmlCraftAPI"
+		]
+	},
+	"mixins": [
+		"htmlcraftapi.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.19.3",
+		"minecraft": "~26.2",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}
