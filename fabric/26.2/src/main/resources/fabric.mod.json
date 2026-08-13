@@ -7,7 +7,7 @@
 	"authors": [
 		"HtmlCraft Team"
 	],
-	"license": "CC0-1.0",
+	"license": "LGPL-2.1",
 	"icon": "assets/htmlcraftapi/icon.png",
 	"environment": "client",
 	"entrypoints": {
